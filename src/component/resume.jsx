@@ -40,20 +40,21 @@ function Resume() {
           <div className="mt-8 flex justify-center">
 
   <a
-    href={`${process.env.PUBLIC_URL}/${resumeData.file}`}
-    download
-    className="flex items-center justify-center
-               bg-blue-600 text-white
-               min-w-[200px] sm:min-w-[240px]
-               px-6 sm:px-8 py-3 sm:py-4
-               text-base md:text-lg
-               rounded-full font-semibold
-               shadow-md hover:shadow-lg
-               hover:bg-blue-700
-               transition duration-300"
-  >
-    Download Resume
-  </a>
+  href={`${process.env.PUBLIC_URL}/resume.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center
+             bg-blue-600 text-white
+             min-w-[200px] sm:min-w-[240px]
+             px-6 sm:px-8 py-3 sm:py-4
+             text-base md:text-lg
+             rounded-full font-semibold
+             shadow-md hover:shadow-lg
+             hover:bg-blue-700
+             transition duration-300"
+>
+  Download Resume
+</a>
 
 </div>
 
