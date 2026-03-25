@@ -1,45 +1,73 @@
-function Experience() {
-  return (
-    <section className="min-h-screen py-24 px-4 md:px-10 slide-right bg-blue-75">
+import { useState } from "react";
 
-      <div className="w-full">
+function Experience() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const experiences = [
+    {
+      role: "Full Stack Developer Intern",
+      company: "CONQUERORS TECHNOLOGY",
+      duration: "1 Month",
+      description:
+        "Worked on building web applications, contributing to both frontend and backend development while improving problem-solving skills.",
+    },
+  ];
+
+  const toggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="py-16 px-4 sm:px-6 md:px-10 bg-blue-50/50 dark:bg-gray-900">
+
+      <div className="max-w-2xl mx-auto">
 
         {/* TITLE */}
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-20 text-black text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 text-gray-800 dark:text-white">
           Experience
         </h2>
 
-        {/* CARD */}
-        <div className=" p-[2px] rounded-xl">
+        {/* LIST */}
+        {experiences.map((exp, index) => (
+          <div
+            key={index}
+            className="mb-4 border border-blue-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800"
+          >
 
-          <div className="bg-white rounded-xl p-10 shadow-lg 
-                          transition duration-300 
-                          hover:scale-[1.02] hover:-translate-y-2 
-                          hover:ring-2 hover:ring-blue-400 
-                          hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]">
+            {/* HEADER */}
+            <button
+              onClick={() => toggle(index)}
+              className="w-full flex justify-between items-center p-4 text-left hover:bg-blue-100 dark:hover:bg-gray-700 transition"
+            >
+              <div>
+                <p className="font-medium text-gray-800 dark:text-white">
+                  {exp.company}
+                </p>
+                <p className="text-sm text-blue-600 dark:text-blue-400">
+                  {exp.role}
+                </p>
+              </div>
 
-            <h3 className="text-2xl font-bold text-black mb-2">
-              💼 Full Stack Developer Intern
-            </h3>
+              <span className="text-blue-500 dark:text-blue-400 text-lg">
+                {activeIndex === index ? "−" : "+"}
+              </span>
+            </button>
 
-            <p className="text-blue-600 text-lg font-semibold mb-1">
-              CONQUERORS TECHNOLOGY
-            </p>
-
-            <p className="text-gray-500 mb-4">
-              Duration: 1 Month
-            </p>
-
-            <p className="text-gray-700  leading-relaxed">
-              Worked as a Full Stack Developer Intern, gaining hands-on experience 
-              in building real-world web applications. Contributed to both frontend 
-              and backend development while improving problem-solving skills and 
-              understanding of development workflows.
-            </p>
+            {/* CONTENT */}
+            {activeIndex === index && (
+              <div className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-300">
+                <p className="mb-1">
+                  <span className="text-blue-600 dark:text-blue-400 font-medium">
+                    Duration:
+                  </span>{" "}
+                  {exp.duration}
+                </p>
+                <p>{exp.description}</p>
+              </div>
+            )}
 
           </div>
-
-        </div>
+        ))}
 
       </div>
 

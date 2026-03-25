@@ -5,7 +5,7 @@ const profile = process.env.PUBLIC_URL + "/Pp.jpeg";
 
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center w-full px-60 py-40 overflow-hidden">
+    <section className="fade-up py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">
       
       {/* 🔥 Background Video */}
       <video

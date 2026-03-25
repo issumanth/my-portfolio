@@ -13,6 +13,12 @@ const projects = [
     live: "https://issumanth.github.io/my-portfolio",
     code: "https://github.com/issumanth/my-portfolio",
   },
+  {
+    title: "Time Table Website",
+    description: "A clean and structured timetable built using HTML and CSS with color-coded subjects.",
+    live: "https://issumanth.github.io/timetable/",
+    code: "https://github.com/issumanth/timetable",
+  },
 ];
 
 function Projects() {

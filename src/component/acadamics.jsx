@@ -1,11 +1,13 @@
+import React from "react";
+
 function Academics() {
   const data = [
     {
-      semester: "1st Sem",
+      semester: "3rd Sem",
       course: "B.Tech CSE-AIML",
       board: "AUTONOMOUS",
       institute: "Sandip University",
-      percentage: "82%",
+      percentage: "8.47 GPA",
     },
     {
       semester: "2nd Sem",
@@ -15,11 +17,11 @@ function Academics() {
       percentage: "8.36 GPA",
     },
     {
-      semester: "3rd Sem",
+      semester: "1st Sem",
       course: "B.Tech CSE-AIML",
       board: "AUTONOMOUS",
       institute: "Sandip University",
-      percentage: "8.47 GPA",
+      percentage: "8.04 GPA",
     },
     {
       semester: "10+2",
@@ -38,29 +40,28 @@ function Academics() {
   ];
 
   return (
-    <section className="w-full py-16 px-4 md:px-10 zoom-in">
+    <section className="slide-left py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 bg-blue-50">
 
-      {/* CONTAINER WITH GLASS EFFECT */}
-      <div className="w-full bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+      <div className="max-w-5xl mx-auto">
 
         {/* TITLE */}
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-20 text-black text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-center text-gray-800">
           Academics
         </h2>
 
         {/* TABLE */}
         <div className="overflow-x-auto">
 
-          <table className="w-full text-left border-collapse">
+          <table className="w-full bg-white rounded-xl shadow-md overflow-hidden">
 
             {/* HEAD */}
-            <thead>
-              <tr className="text-black border-b-2 border-blue-400 text-lg md:text-xl">
-                <th className="p-4">Semester</th>
-                <th className="p-4">Course</th>
-                <th className="p-4">Board</th>
-                <th className="p-4">College / School</th>
-                <th className="p-4">Percentage</th>
+            <thead className="bg-blue-600 text-white">
+              <tr>
+                <th className="p-3 text-left">Semester</th>
+                <th className="p-3 text-left">Course</th>
+                <th className="p-3 text-left">Board</th>
+                <th className="p-3 text-left">Institute</th>
+                <th className="p-3 text-left">Result</th>
               </tr>
             </thead>
 
@@ -69,17 +70,13 @@ function Academics() {
               {data.map((item, index) => (
                 <tr
                   key={index}
-                  className="transition duration-300 
-                             hover:bg-blue-50 
-                             hover:scale-[1.01] 
-                             hover:shadow-md"
+                  className="border-t hover:bg-blue-50 transition"
                 >
-                  <td className="p-4 text-gray-700">{item.semester}</td>
-                  <td className="p-4 text-gray-700">{item.course}</td>
-                  <td className="p-4 text-gray-700">{item.board}</td>
-                  <td className="p-4 text-gray-700">{item.institute}</td>
-
-                  <td className="p-4 font-bold text-blue-600">
+                  <td className="p-3 text-gray-700">{item.semester}</td>
+                  <td className="p-3 text-gray-700">{item.course}</td>
+                  <td className="p-3 text-gray-700">{item.board}</td>
+                  <td className="p-3 text-gray-700">{item.institute}</td>
+                  <td className="p-3 font-semibold text-blue-600">
                     {item.percentage}
                   </td>
                 </tr>

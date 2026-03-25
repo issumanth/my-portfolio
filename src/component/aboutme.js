@@ -1,16 +1,16 @@
 function About() {
   return (
-    <section className="min-h-screen py-24 w-fullpx-4 md:px-10 fade-up bg-blue-200">
+    <section className="min-h-screen py-16 sm:py-20 md:py-24 bg-blue-200">
 
-      <div className="w-full">
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-10">
 
         {/* TITLE */}
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-black text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 text-black text-center">
           About Me
         </h2>
 
         {/* CONTENT */}
-        <p className="text-lg md:text-2xl text-gray-700 leading-relaxed text-left">
+        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed text-left">
 
           Hello, I’m{" "}
           <span className="text-blue-600 font-semibold">
@@ -39,8 +39,7 @@ function About() {
           <span className="text-blue-500 font-medium">SQL</span> and I am learning{" "}
           <span className="text-blue-500 font-medium">
             React, Tailwind CSS, and Django
-          </span>
-          .
+          </span>.
 
           <br /><br />
 
@@ -52,7 +51,7 @@ function About() {
 
           <br /><br />
 
-          <span className="block text-center text-blue-600 font-bold text-2xl mt-6">
+          <span className="block text-center text-blue-600 font-bold text-lg sm:text-xl md:text-2xl mt-6">
             “Never give up, no matter what. There are infinite chances until you die.”
           </span>
 
