@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPhone Calculator</title>
+  <link rel="stylesheet" href="calc.css" />
+</head>
+<body>
+  <div class="calculator" role="application" aria-label="Calculator">
+    <div class="display-wrap">
+      <div id="operation" class="operation" aria-live="polite"></div>
+      <input id="display" type="text" value="0" readonly aria-live="polite" />
+    </div>
+
+    <div class="buttons">
+      <button class="control" onclick="allClear()">AC</button>
+      <button class="control" onclick="deleteLastChar()">⌫</button>
+      <button class="control" onclick="toggleSign()">+/-</button>
+      <button class="control" onclick="percent()">%</button>
+      <button class="operator" onclick="chooseOperator('/')">÷</button>
+
+      <button onclick="inputDigit('7')">7</button>
+      <button onclick="inputDigit('8')">8</button>
+      <button onclick="inputDigit('9')">9</button>
+      <button class="operator" onclick="chooseOperator('*')">×</button>
+
+      <button onclick="inputDigit('4')">4</button>
+      <button onclick="inputDigit('5')">5</button>
+      <button onclick="inputDigit('6')">6</button>
+      <button class="operator" onclick="chooseOperator('-')">−</button>
+
+      <button onclick="inputDigit('1')">1</button>
+      <button onclick="inputDigit('2')">2</button>
+      <button onclick="inputDigit('3')">3</button>
+      <button class="operator" onclick="chooseOperator('+')">+</button>
+
+      <button class="zero" onclick="inputDigit('0')">0</button>
+      <button onclick="inputDecimal()">.</button>
+      <button class="operator" onclick="compute()">=</button>
+    </div>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+</html>
