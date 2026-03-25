@@ -1,5 +1,7 @@
-import profile from "../assets/Pp.jpg.jpeg";
 import bgVideo from "../assets/bgv.mp4"; // <-- your video file
+
+// Use the public folder image directly so path is exactly what you placed in public/Pp.jpeg
+const profile = process.env.PUBLIC_URL + "/Pp.jpeg";
 
 function Hero() {
   return (
