@@ -1,80 +1,62 @@
 import React from "react";
 
+const projects = [
+  {
+    title: "Calculator App",
+    description: "A simple calculator built using HTML, CSS, and JavaScript.",
+    live: "https://issumanth.github.io/calc/",
+    code: "https://github.com/issumanth/calc",
+  },
+  {
+    title: "Portfolio Website",
+    description: "My personal portfolio built using React and Tailwind CSS.",
+    live: "https://issumanth.github.io/my-portfolio",
+    code: "https://github.com/issumanth/my-portfolio",
+  },
+];
+
 function Projects() {
   return (
-    <section className="bg-blue-50 py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="py-20 px-4 bg-gray-50">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600">
+        My Projects
+      </h2>
 
-        <h2 className="text-4xl font-bold text-blue-600 mb-10">
-          My Projects
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-
-          {/* Calculator Project */}
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-            <h3 className="text-2xl font-semibold text-blue-600 mb-3">
-              Calculator App
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition"
+          >
+            <h3 className="text-xl font-semibold mb-2">
+              {project.title}
             </h3>
 
-            <p className="text-gray-600 mb-6">
-              A simple calculator built using HTML, CSS and JavaScript.
+            <p className="text-gray-600 mb-4">
+              {project.description}
             </p>
 
-            <div className="flex justify-center gap-4">
+            <div className="flex gap-4">
               <a
-                href="/calc/calc.html"
+                href={project.live}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
+                rel="noreferrer"
+                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
               >
-                🚀 Go Live
+                Live
               </a>
 
               <a
-                href="https://github.com/issumanth/calculator-project"
+                href={project.code}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition"
+                rel="noreferrer"
+                className="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50"
               >
-                💻 Code
+                Code
               </a>
             </div>
           </div>
-
-          {/* Portfolio Project */}
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-            <h3 className="text-2xl font-semibold text-blue-600 mb-3">
-              Portfolio Website
-            </h3>
-
-            <p className="text-gray-600 mb-6">
-              My personal portfolio built using React and Tailwind CSS.
-            </p>
-
-            <div className="flex justify-center gap-4">
-              
-              {/* 🔥 This opens your current portfolio */}
-              <a
-                href="/"
-                className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
-              >
-                🚀 Go Live
-              </a>
-
-              <a
-                href="https://github.com/issumanth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-black transition"
-              >
-                💻 Code
-              </a>
-
-            </div>
-          </div>
-
-        </div>
+        ))}
       </div>
     </section>
   );
