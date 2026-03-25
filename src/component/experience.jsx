@@ -9,7 +9,15 @@ function Experience() {
       company: "CONQUERORS TECHNOLOGY",
       duration: "1 Month",
       description:
-        "Worked on building web applications, contributing to both frontend and backend development while improving problem-solving skills.",
+        "Worked on developing responsive web applications while strengthening frontend and core development skills through practical implementation.",
+      responsibilities: [
+        "Developed a calculator using HTML, CSS, and JavaScript",
+        "Designed and built a responsive portfolio website using React and Tailwind CSS",
+      ],
+      learnings: [
+        "Strong understanding of JavaScript and DOM manipulation",
+        "Enhanced problem-solving and debugging skills",
+      ],
     },
   ];
 
@@ -18,12 +26,13 @@ function Experience() {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-10 bg-blue-50/50 dark:bg-gray-900">
+    <section className="py-20 px-6 md:px-10 bg-blue-50">
 
-      <div className="max-w-2xl mx-auto">
+      {/* CONTAINER */}
+      <div className="max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto">
 
         {/* TITLE */}
-        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 text-gray-800 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">
           Experience
         </h2>
 
@@ -31,38 +40,78 @@ function Experience() {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="mb-4 border border-blue-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800"
+            className="mb-6 md:mb-8 lg:mb-10 
+                       border border-blue-100 
+                       rounded-2xl bg-white 
+                       shadow-md hover:shadow-lg 
+                       transition-all duration-300"
           >
 
             {/* HEADER */}
             <button
               onClick={() => toggle(index)}
-              className="w-full flex justify-between items-center p-4 text-left hover:bg-blue-100 dark:hover:bg-gray-700 transition"
+              className="w-full flex justify-between items-center 
+                         p-5 md:p-6 lg:p-8 text-left 
+                         hover:bg-blue-100 transition"
             >
               <div>
-                <p className="font-medium text-gray-800 dark:text-white">
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">
                   {exp.company}
                 </p>
-                <p className="text-sm text-blue-600 dark:text-blue-400">
+                <p className="text-base md:text-lg lg:text-xl text-blue-600">
                   {exp.role}
                 </p>
               </div>
 
-              <span className="text-blue-500 dark:text-blue-400 text-lg">
+              <span className="text-xl lg:text-2xl text-blue-500">
                 {activeIndex === index ? "−" : "+"}
               </span>
             </button>
 
             {/* CONTENT */}
             {activeIndex === index && (
-              <div className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-300">
-                <p className="mb-1">
-                  <span className="text-blue-600 dark:text-blue-400 font-medium">
+              <div className="px-6 md:px-8 lg:px-10 pb-6 md:pb-8 lg:pb-10 
+                              text-base md:text-lg lg:text-xl 
+                              text-gray-700 
+                              space-y-6 leading-relaxed">
+
+                {/* DURATION */}
+                <p>
+                  <span className="text-blue-700 font-semibold">
                     Duration:
                   </span>{" "}
                   {exp.duration}
                 </p>
-                <p>{exp.description}</p>
+
+                {/* DESCRIPTION */}
+                <p className="leading-loose">
+                  {exp.description}
+                </p>
+
+                {/* RESPONSIBILITIES */}
+                <div className="bg-blue-50 p-4 md:p-5 rounded-xl border border-blue-100">
+                  <p className="font-semibold text-blue-800 mb-2">
+                    Responsibilities:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {exp.responsibilities.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* LEARNINGS */}
+                <div className="bg-blue-50 p-4 md:p-5 rounded-xl border border-blue-100">
+                  <p className="font-semibold text-blue-800 mb-2">
+                    Key Learnings:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {exp.learnings.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
               </div>
             )}
 

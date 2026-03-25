@@ -1,66 +1,89 @@
 function About() {
   return (
-    <section className="min-h-screen py-16 sm:py-20 md:py-24 bg-blue-200">
+    <section className="min-h-screen py-20 px-6 md:px-10 bg-blue-50">
 
-      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-10">
+      <div className="max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
 
         {/* TITLE */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 text-black text-center">
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-12 text-center text-blue-900">
           About Me
         </h2>
 
-        {/* CONTENT */}
-        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed text-left">
+        {/* CARD */}
+        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 md:p-8 lg:p-10 space-y-6">
 
-          Hello, I’m{" "}
-          <span className="text-blue-600 font-semibold">
-            Godugu Sumanth
-          </span>
-          , a passionate and dedicated student who believes in growth, consistency,
-          and the power of hard work.
+          {/* INTRO */}
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+            Hello, I’m{" "}
+            <span className="text-blue-600 font-semibold">
+              Godugu Sumanth
+            </span>, a highly motivated and detail-oriented aspiring software developer with a strong commitment to continuous learning and technical growth.
+          </p>
 
-          <br /><br />
+          {/* GOAL */}
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+            I am currently focusing on becoming a{" "}
+            <span className="text-blue-600 font-semibold">
+              Full-Stack Developer
+            </span>, with hands-on experience in developing scalable and responsive web applications using modern technologies.
+          </p>
 
-          I am currently on a journey to become a{" "}
-          <span className="text-blue-600 font-semibold">
-            Full-Stack Developer
-          </span>
-          , building my skills step by step by working on real-world projects.
+          {/* TECH INTEREST */}
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+            My interest in software development is driven by a strong foundation in problem-solving and a passion for designing efficient, user-centric digital solutions.
+          </p>
 
-          <br /><br />
+          {/* SKILLS */}
+          <div className="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <p className="font-semibold text-blue-800 mb-2">
+              Technical Skills:
+            </p>
+            <p className="text-base md:text-lg lg:text-xl text-gray-700">
+              Proficient in{" "}
+              <span className="text-blue-600 font-medium">Python</span> and{" "}
+              <span className="text-blue-600 font-medium">SQL</span>, with working knowledge of{" "}
+              <span className="text-blue-600 font-medium">
+                JavaScript, React.js, Tailwind CSS, and Django
+              </span>.
+            </p>
+          </div>
 
-          My interest in software development comes from curiosity and the desire
-          to transform ideas into real applications.
+          {/* EXPERIENCE */}
+          <div className="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <p className="font-semibold text-blue-800 mb-2">
+              Development Experience:
+            </p>
+            <p className="text-base md:text-lg lg:text-xl text-gray-700">
+              Developed multiple projects including a calculator, an object-oriented JavaScript application, and a responsive portfolio website, demonstrating practical implementation of frontend and backend concepts.
+            </p>
+          </div>
 
-          <br /><br />
+          {/* INTERESTS */}
+          <div className="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <p className="font-semibold text-blue-800 mb-2">
+              Additional Interests:
+            </p>
+            <p className="text-base md:text-lg lg:text-xl text-gray-700">
+              Strong interest in{" "}
+              <span className="text-blue-600 italic">
+                cinematography, video editing, and visual storytelling
+              </span>, enhancing creativity and design thinking.
+            </p>
+          </div>
 
-          I have knowledge in{" "}
-          <span className="text-blue-500 font-medium">Python</span>,{" "}
-          <span className="text-blue-500 font-medium">SQL</span> and I am learning{" "}
-          <span className="text-blue-500 font-medium">
-            React, Tailwind CSS, and Django
-          </span>.
+          {/* QUOTE */}
+          <div className="text-center pt-4">
+            <p className="text-blue-700 font-bold text-lg md:text-xl lg:text-2xl">
+              “Never give up, no matter what. There are infinite chances until you die.”
+            </p>
+          </div>
 
-          <br /><br />
+          {/* END NOTE */}
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 text-center leading-relaxed">
+            I continuously strive to enhance my technical expertise, adapt to emerging technologies, and contribute effectively to real-world software development environments.
+          </p>
 
-          Apart from coding, I am deeply interested in{" "}
-          <span className="text-blue-600 italic">
-            cinematography, video editing, and filmography
-          </span>
-          , which enhance my creativity and visual thinking.
-
-          <br /><br />
-
-          <span className="block text-center text-blue-600 font-bold text-lg sm:text-xl md:text-2xl mt-6">
-            “Never give up, no matter what. There are infinite chances until you die.”
-          </span>
-
-          <br />
-
-          I believe in continuous improvement, learning from failures, and pushing
-          forward no matter the situation.
-
-        </p>
+        </div>
 
       </div>
 
