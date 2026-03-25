@@ -1,4 +1,9 @@
 function Resume() {
+  const resume = {
+    file: "resume.pdf",
+    label: "Download Resume"
+  };
+
   return (
     <section className="zoom-in py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 bg-blue-50/50 dark:bg-gray-900">
 
@@ -26,13 +31,22 @@ function Resume() {
         {/* Button */}
         <div className="flex justify-center mt-6">
 
-          <a
-  href={process.env.PUBLIC_URL + "/resume.pdf"}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Download Resume
-</a>
+         <a
+        href={`${process.env.PUBLIC_URL}/${resume.file}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center
+                   bg-blue-600 text-white
+                   min-w-[200px] sm:min-w-[240px]
+                   px-6 sm:px-8 py-3 sm:py-4
+                   text-base md:text-lg
+                   rounded-full font-semibold
+                   shadow-md hover:shadow-lg
+                   hover:bg-blue-700
+                   transition duration-300"
+      >
+        {resume.label}
+      </a>
 
         </div>
 
